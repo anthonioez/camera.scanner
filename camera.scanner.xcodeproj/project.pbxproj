@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E6BCDA6A28D368AE0088DF63 /* camera_scannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BCDA6928D368AE0088DF63 /* camera_scannerApp.swift */; };
+		E68487AC28D37A590069DB65 /* ScanningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68487AB28D37A580069DB65 /* ScanningView.swift */; };
+		E68487BE28D383750069DB65 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68487B628D383750069DB65 /* CameraPreview.swift */; };
+		E68487C328D383750069DB65 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68487BB28D383750069DB65 /* CameraService.swift */; };
+		E68487CC28D399820069DB65 /* CircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68487CB28D399820069DB65 /* CircularView.swift */; };
+		E6BCDA6A28D368AE0088DF63 /* CameraScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BCDA6928D368AE0088DF63 /* CameraScannerApp.swift */; };
 		E6BCDA6C28D368AE0088DF63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BCDA6B28D368AE0088DF63 /* ContentView.swift */; };
 		E6BCDA6E28D368B10088DF63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6BCDA6D28D368B10088DF63 /* Assets.xcassets */; };
 		E6BCDA7128D368B10088DF63 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6BCDA7028D368B10088DF63 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E68487AB28D37A580069DB65 /* ScanningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningView.swift; sourceTree = "<group>"; };
+		E68487B328D381B30069DB65 /* camera-scanner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "camera-scanner-Info.plist"; sourceTree = SOURCE_ROOT; };
+		E68487B628D383750069DB65 /* CameraPreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		E68487BB28D383750069DB65 /* CameraService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		E68487CB28D399820069DB65 /* CircularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularView.swift; sourceTree = "<group>"; };
 		E6BCDA6628D368AE0088DF63 /* camera.scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = camera.scanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E6BCDA6928D368AE0088DF63 /* camera_scannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = camera_scannerApp.swift; sourceTree = "<group>"; };
+		E6BCDA6928D368AE0088DF63 /* CameraScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScannerApp.swift; sourceTree = "<group>"; };
 		E6BCDA6B28D368AE0088DF63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E6BCDA6D28D368B10088DF63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6BCDA7028D368B10088DF63 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -32,6 +41,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E68487B428D383750069DB65 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E68487BB28D383750069DB65 /* CameraService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E68487C728D384DD0069DB65 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E6BCDA6B28D368AE0088DF63 /* ContentView.swift */,
+				E68487B628D383750069DB65 /* CameraPreview.swift */,
+				E68487AB28D37A580069DB65 /* ScanningView.swift */,
+				E68487CB28D399820069DB65 /* CircularView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E6BCDA5D28D368AE0088DF63 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +79,10 @@
 		E6BCDA6828D368AE0088DF63 /* camera.scanner */ = {
 			isa = PBXGroup;
 			children = (
-				E6BCDA6928D368AE0088DF63 /* camera_scannerApp.swift */,
-				E6BCDA6B28D368AE0088DF63 /* ContentView.swift */,
+				E68487C728D384DD0069DB65 /* Views */,
+				E68487B428D383750069DB65 /* Service */,
+				E68487B328D381B30069DB65 /* camera-scanner-Info.plist */,
+				E6BCDA6928D368AE0088DF63 /* CameraScannerApp.swift */,
 				E6BCDA6D28D368B10088DF63 /* Assets.xcassets */,
 				E6BCDA6F28D368B10088DF63 /* Preview Content */,
 			);
@@ -137,8 +167,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E68487BE28D383750069DB65 /* CameraPreview.swift in Sources */,
+				E68487C328D383750069DB65 /* CameraService.swift in Sources */,
+				E68487AC28D37A590069DB65 /* ScanningView.swift in Sources */,
 				E6BCDA6C28D368AE0088DF63 /* ContentView.swift in Sources */,
-				E6BCDA6A28D368AE0088DF63 /* camera_scannerApp.swift in Sources */,
+				E68487CC28D399820069DB65 /* CircularView.swift in Sources */,
+				E6BCDA6A28D368AE0088DF63 /* CameraScannerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +229,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -270,6 +304,7 @@
 				DEVELOPMENT_TEAM = E3FZGW57N3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "camera-scanner-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +334,7 @@
 				DEVELOPMENT_TEAM = E3FZGW57N3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "camera-scanner-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
